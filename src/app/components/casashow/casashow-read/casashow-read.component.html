@@ -1,0 +1,59 @@
+<div class="mat-elevation-z5">
+    <table mat-table [dataSource]="casashows">
+      <!-- Id Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef >Id</th>
+        <td mat-cell *matCellDef="let row">{{row.id}}</td>
+      </ng-container>
+  
+      <!-- Nome Column -->
+      <ng-container matColumnDef="nome">
+        <th mat-header-cell *matHeaderCellDef >Nome</th>
+        <td mat-cell *matCellDef="let row">{{row.nome}}</td>
+      </ng-container>
+  
+      <!-- Endereço Column -->
+      <ng-container matColumnDef="endereco">
+        <th mat-header-cell *matHeaderCellDef >Endereço</th>
+        <td mat-cell *matCellDef="let row">{{row.endereco}}</td>
+      </ng-container>
+  
+      <!-- Capacidade Column -->
+      <ng-container matColumnDef="capacidade">
+        <th mat-header-cell *matHeaderCellDef >Capacidade</th>
+        <td mat-cell *matCellDef="let row">{{row.capacidade}}</td>
+      </ng-container>
+  
+      <!-- Telefone Column -->
+      <ng-container matColumnDef="telefone">
+        <th mat-header-cell *matHeaderCellDef >Telefone</th>
+        <td mat-cell *matCellDef="let row">{{row.telefone}}</td>
+      </ng-container>
+
+      <!-- Site Column -->
+      <ng-container matColumnDef="site">
+        <th mat-header-cell *matHeaderCellDef >Site</th>
+        <td mat-cell *matCellDef="let row">{{row.site}}</td>
+      </ng-container>
+
+         <!-- Acão Column -->
+         <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef >Ações</th>
+          <td mat-cell *matCellDef="let row">
+              <a routerLink="/casashow/update/{{ row.id }}" class="edit">
+                  <i class="material-icons">
+                      edit
+                  </i>
+              </a>
+              <a routerLink="/casashow/delete/{{ row.id }}" class="delete">
+                  <i class="material-icons">
+                      delete
+                  </i>
+              </a>
+          </td>
+        </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>

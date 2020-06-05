@@ -1,0 +1,21 @@
+<mat-card>
+    <mat-card-title> Alterar Evento </mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="event.nome" name="nome">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Descrição" [(ngModel)]="event.descricao" name="descricao">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Quantidade de ingresso" [(ngModel)]="event.qtdIngresso" name="qtdIngresso">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Preço (R$)" [(ngModel)]="event.preco" name="preco">
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="updateEvent()" color="primary"> Atualizar </button>
+
+    <button mat-raised-button (click)="cancel()"> Cancela </button>
+</mat-card>

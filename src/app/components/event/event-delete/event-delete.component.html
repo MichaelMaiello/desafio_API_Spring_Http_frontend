@@ -1,0 +1,21 @@
+<mat-card>
+    <mat-card-title> Excluir Evento </mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [value]="event.nome" name="nome" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Descrição" [value]="event.descricao" name="descricao" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Quantidade de ingresso" [value]="event.qtdIngresso" name="qtdIngresso" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Preço (R$)" [value]="event.preco" name="preco" disabled>
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="deleteEvent()" color="warn"> Excluir </button>
+
+    <button mat-raised-button (click)="cancel()"> Cancela </button>
+</mat-card>

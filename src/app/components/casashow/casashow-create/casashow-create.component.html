@@ -1,0 +1,24 @@
+<mat-card>
+    <mat-card-title> Nova Casa de show </mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="casashow.nome" name="nome">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Endereço" [(ngModel)]="casashow.endereco" name="endereco">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Capacidade" [(ngModel)]="casashow.capacidade" name="capacidade">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Telefone" [(ngModel)]="casashow.telefone" name="telefone">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Site" [(ngModel)]="casashow.site" name="site">
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="createCasashow()" color="primary"> Salvar </button>
+
+    <button mat-raised-button (click)="cancel()"> Cancela </button>
+</mat-card>

@@ -1,0 +1,24 @@
+<mat-card>
+    <mat-card-title> Excluir Casa de show </mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [value]="casashow.nome" name="nome" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Endereço" [value]="casashow.endereco" name="endereco" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Capacidade" [value]="casashow.capacidade" name="capacidade" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Telefone" [value]="casashow.telefone" name="telefone" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Site" [value]="casashow.site" name="site" disabled>
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="deleteCasashow()" color="primary"> Excluir </button>
+
+    <button mat-raised-button (click)="cancel()"> Cancela </button>
+</mat-card>
